@@ -1,60 +1,119 @@
-# 🎮 Rock–Paper–Scissors Game ✊📄✂️  
+# 🎮 Stone–Paper–Scissor Game (C++)
 
-A simple **C++ console-based Rock–Paper–Scissors game** where you play against the computer.  
-The computer’s moves are randomly generated, and the game keeps track of **rounds, winners, and final results**.  
-
----
-
-## 📝 Features  
-✅ Play **Stone (Rock), Paper, or Scissors** against the computer.  
-✅ Randomized computer moves using **rand()** and **srand()**.  
-✅ Supports **multiple rounds** (default = 3 rounds per game).  
-✅ Tracks and displays:  
-- Player wins  
-- Computer wins  
-- Draws  
-✅ Displays a **final winner summary** after all rounds.  
-✅ Option to **play again** without restarting the program.  
+✨ A fun and interactive **console-based game** built with C++  
+🤖 Play against the computer and prove your strategy!
 
 ---
 
-## ⚙️ How It Works  
-1️⃣ The player chooses:  
-- `1` → **Stone**  
-- `2` → **Paper**  
-- `3` → **Scissors**  
+## 🚀 Features  
 
-2️⃣ The computer randomly chooses its move.  
+🎯 **Gameplay**
+- 🤖 Play vs Computer
+- 🔢 Choose number of rounds
+- 🎲 Random computer moves
 
-3️⃣ The game decides the round winner:  
-- **Stone beats Scissors**  
-- **Paper beats Stone**  
-- **Scissors beat Paper**  
-- Same choice → **Draw**  
+📊 **Tracking**
+- 👤 Player Score  
+- 💻 Computer Score  
+- 🤝 Draws  
 
-4️⃣ After all rounds, the **final game winner** is declared.  
+🖥️ **Experience**
+- 📢 Round-by-round results  
+- 🏁 Final winner summary  
+- 🎨 Dynamic console colors  
+- 🔁 Replay without restarting  
+
+---
+
+## 🎮 How to Play  
+
+### 🕹️ Step 1 — Choose your move:
+1 → 🪨 Stone  
+2 → 📄 Paper  
+3 → ✂️ Scissor  
+
+### ⚔️ Step 2 — Computer plays 🤖  
+- Random move generated automatically  
+
+### 🧠 Step 3 — Winner decided:
+
+| Your Move | Computer | Result |
+|----------|---------|--------|
+| 🪨 Stone | ✂️ Scissor | ✅ You Win |
+| 📄 Paper | 🪨 Stone | ✅ You Win |
+| ✂️ Scissor | 📄 Paper | ✅ You Win |
+| Same | Same | 🤝 Draw |
 
 ---
 
 ## 📂 Code Structure  
 
-### 🔹 Enums  
-- `enGameChoice` → Game choices (**Stone, Paper, Scissors**)  
-- `enWinner` → Round/Game results (**Player1, Computer, Draw**)  
-
-### 🔹 Structs  
-- `stRoundInfo` → Stores round details (choices, winner, etc.)  
-- `stGameResults` → Stores overall game results  
-
-### 🔹 Main Functions  
-- `RandomNumber()` → Generates random numbers  
-- `GetComputerChoice()` → Picks computer’s move  
-- `WhoWonTheRound()` → Decides round winner  
-- `WhoWonTheGame()` → Declares final game winner  
-- `PrintRoundResults()` → Prints round details  
-- `PlayGame()` → Plays multiple rounds  
-- `StartGame()` → Handles replay loop  
+### 🔹 Enum
+StonePaperScissor  
+- Stone = 1 🪨  
+- Paper = 2 📄  
+- Scissor = 3 ✂️  
 
 ---
 
-💻 **Made with C++** | ✨ By **Abubakaryimam**  
+### 🔹 Core Functions  
+
+| Function | Purpose |
+|--------|--------|
+| RandomNumber() | 🎲 Generate random number |
+| ReadRoundTurn() | 🔢 Read number of rounds |
+| PersonChoice() | 👤 Get player choice |
+| MachineChoice() | 💻 Computer choice |
+| Choices() | ⚖️ Decide winner |
+| ScoreBoard() | 📊 Show round details |
+| TotalScore() | 🏁 Final result |
+| DisplayMain() | 🔁 Game loop |
+
+---
+
+⚙️ Compile  
+g++ Rock-paper-scissors.cpp -o game  
+
+▶️ Run  
+./game  
+
+---
+
+## 📸 Sample Gameplay  
+
+🎮 Round[1] Started!  
+------------------------------  
+👤 Player Choice   : 🪨 Stone  
+💻 Computer Choice : 📄 Paper  
+🏆 Winner          : [PC WIN]  
+------------------------------  
+
+---
+
+## ⚠️ Notes  
+
+- 💡 Works best on Windows  
+- 🎨 Uses system("color")  
+- 🧹 Uses system("cls")  
+- ⏱️ Uses srand(time(NULL))  
+
+---
+
+## 🔮 Future Improvements  
+
+- ❗ Input validation  
+- 🎨 GUI version  
+- 👥 Multiplayer  
+- 💾 Save scores  
+
+---
+
+## 👨‍💻 Author  
+
+Abubakar Yimam 🚀  
+
+---
+
+## 📜 License  
+
+Free to use and modify
